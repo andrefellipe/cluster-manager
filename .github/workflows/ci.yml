@@ -65,4 +65,4 @@ jobs:
         if: runner.os != 'Windows'
         run: |
           poetry install --no-root
-          PYTHONPATH=src .venv/bin/mutmut run --paths-to-mutate=src/
+          .venv/bin/mutmut run
