@@ -45,4 +45,4 @@ clean: ## Remove virtual environments, cache directories, and build artifacts
 mutate: ## Run Mutmut for dual-tier mutation testing (bypasses Poetry hooks)
 	poetry install --no-root
 	rm -rf mutants/ .coverage
-	.venv/bin/mutmut run; STATUS=$$?; poetry install; exit $$STATUS
+	PYTHONPATH=src .venv/bin/mutmut run --paths-to-mutate=src/; STATUS=$$?; poetry install; exit $$STATUS
