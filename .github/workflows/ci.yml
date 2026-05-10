@@ -65,4 +65,4 @@ jobs:
         if: runner.os != 'Windows'
         run: |
           poetry install --no-root
-          .venv/bin/mutmut run
+          rm -f .VolumeIcon.icns; .venv/bin/mutmut run

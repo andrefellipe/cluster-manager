@@ -42,7 +42,7 @@ clean: ## Remove virtual environments, cache directories, and build artifacts
 	rm -f .coverage coverage.xml
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 
-mutate: ## Run Mutmut for dual-tier mutation testing (bypasses Poetry hooks)
+mutate: ## Run Mutmut for dual-tier mutation testing
 	poetry install --no-root
-	rm -rf mutants/ .coverage
-	.venv/bin/mutmut run; STATUS=$$?; poetry install; exit $$STATUS
+	rm -rf mutants/ .coverage* .mutmut-cache* .nox .venv .pytest_cache .mypy_cache .ruff_cache
+	poetry run mutmut run; STATUS=$$?; poetry install; exit $$STATUS

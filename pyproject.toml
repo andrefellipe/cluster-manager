@@ -67,16 +67,10 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 
 [project.scripts]
-hello-world = "cluster_manager.cli:app"
+cluster-manager = "cluster_manager.cli:app"
 
 [tool.coverage.report]
 exclude_lines = [
     "pragma: no cover",
     "if __name__ == .__main__.:"
 ]
-
-[tool.mutmut]
-paths_to_mutate = "src/"
-backup = false
-runner = "PYTHONPATH=src pytest -x"
-tests_dir = "tests/"
