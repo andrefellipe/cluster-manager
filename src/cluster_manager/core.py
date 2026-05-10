@@ -1,4 +1,4 @@
-"""Core business logic for the hello_world package."""
+"""Core business logic for the cluster_manager package."""
 
 
 def say_hello(name: str | None = None) -> str:

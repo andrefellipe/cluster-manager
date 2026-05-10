@@ -1,6 +1,6 @@
 from typer.testing import CliRunner
 
-from hello_world.cli import app
+from cluster_manager.cli import app
 
 runner = CliRunner()
 

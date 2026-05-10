@@ -1,5 +1,5 @@
 [project]
-name = "hello-world-andrefellipe"
+name = "cluster-manager"
 version = "0.2.0"
 description = "A state-of-the-art Python package boilerplate."
 authors = [
@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "hello_world", from = "src"}]
+packages = [{include = "cluster_manager", from = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -67,7 +67,7 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 
 [project.scripts]
-hello-world = "hello_world.cli:app"
+hello-world = "cluster_manager.cli:app"
 
 [tool.coverage.report]
 exclude_lines = [

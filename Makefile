@@ -23,7 +23,7 @@ typecheck: ## Run Mypy for strict static type checking
 	poetry run mypy src
 
 test: ## Run Pytest with 100% coverage enforcement and XML reporting
-	poetry run pytest --cov=hello_world --cov-report=term-missing --cov-report=xml --cov-fail-under=100
+	poetry run pytest --cov=cluster_manager --cov-report=term-missing --cov-report=xml --cov-fail-under=100
 
 audit: ## Run pip-audit to scan dependencies for known security vulnerabilities
 	poetry run pip-audit

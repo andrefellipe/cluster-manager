@@ -1,9 +1,9 @@
-"""Command Line Interface for the hello_world package."""
+"""Command Line Interface for the cluster_manager package."""
 
 import typer
 from typing_extensions import Annotated
 
-from hello_world.core import say_hello
+from cluster_manager.core import say_hello
 
 app = typer.Typer(
     name="hello-world",

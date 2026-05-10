@@ -13,4 +13,4 @@ def tests(session):
     session.install(".", "pytest", "pytest-cov")
 
     # Run the tests
-    session.run("pytest", "--cov=hello_world", "--cov-report=term-missing")
+    session.run("pytest", "--cov=cluster_manager", "--cov-report=term-missing")

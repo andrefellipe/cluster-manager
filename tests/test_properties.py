@@ -1,9 +1,9 @@
-"""Property-based tests for the hello_world package."""
+"""Property-based tests for the cluster_manager package."""
 
 from hypothesis import given
 from hypothesis import strategies as st
 
-from hello_world.core import say_hello
+from cluster_manager.core import say_hello
 
 
 @given(st.text())
